@@ -1,0 +1,68 @@
+name: 錯誤回報
+description: 回報可重現的安裝、執行、稽核或輸出問題
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝協助改善 Study Note Compiler。請勿貼上個資、API key 或未授權教材內容。
+  - type: input
+    id: version
+    attributes:
+      label: Skill 版本
+      placeholder: 例如 v2.3.0
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 發生階段
+      options:
+        - 安裝或載入 Skill
+        - ingest / model
+        - build / compile
+        - update
+        - readable-revise
+        - audit / Coverage
+        - Markdown 轉 Word
+        - Render QA
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期結果
+      description: 原本預期發生什麼？
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 實際結果與錯誤訊息
+      description: 請移除個資、教材正文、金鑰及機密路徑。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 重現步驟
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 執行環境
+      placeholder: 例如 Windows 11、Python 3.12、Codex desktop
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公開內容確認
+      options:
+        - label: 我已移除個資、未授權教材、密碼與 API key。
+          required: true

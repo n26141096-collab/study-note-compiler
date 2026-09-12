@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使用心得與成果分享
+    url: https://github.com/n26141096-collab/study-note-compiler/discussions
+    about: 分享使用情境、成果與整體心得
+  - name: 使用方法與一般問答
+    url: https://github.com/n26141096-collab/study-note-compiler/discussions/categories/q-a
+    about: 不確定是不是錯誤時，請先在 Discussions 詢問

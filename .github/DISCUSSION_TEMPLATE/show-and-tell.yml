@@ -1,0 +1,57 @@
+title: "[使用心得] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝分享 Study Note Compiler 的使用成果。請使用匿名化描述或截圖，不要公開個資、API key、機密資料或未授權教材全文。
+  - type: dropdown
+    id: material
+    attributes:
+      label: 使用的教材類型
+      options:
+        - PDF
+        - PowerPoint
+        - Word
+        - Markdown
+        - 題庫或課堂筆記
+        - 混合資料
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: 完成結果
+      options:
+        - 成功產生 Markdown 與 Word
+        - 只成功產生 Markdown
+        - 只成功產生 Word
+        - 尚未成功完成
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: 使用情境與成果
+      description: 你整理了什麼類型的內容？成果如何幫助你學習或複習？
+    validations:
+      required: true
+  - type: textarea
+    id: best_part
+    attributes:
+      label: 最有幫助的部分
+      description: 哪項功能、審查或輸出最有價值？
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: 卡住的地方或改善建議
+      description: 可以包含安裝、提示、執行時間、內容或版面問題。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公開內容確認
+      options:
+        - label: 我已移除個資、未授權教材、密碼與 API key。
+          required: true

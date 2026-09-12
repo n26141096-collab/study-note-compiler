@@ -1,0 +1,43 @@
+name: 功能建議
+description: 提議新的工作流程、審查規則、輸出格式或改善方向
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        請先描述學習情境與真正要解決的問題，不需要先設計完整技術方案。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用情境與問題
+      description: 目前在哪個步驟遇到限制？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望的改善
+      description: 理想的輸入、行為或輸出是什麼？
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影響範圍
+      options:
+        - 安裝與入門
+        - 來源與知識建模
+        - Markdown 筆記
+        - Word 版面與 Render QA
+        - 題庫與 Coverage
+        - 可閱讀性審查
+        - 工程學習 Profile
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: 匿名化範例
+      description: 選填；請勿提供個資或未授權教材。
