@@ -1,0 +1,19 @@
+knowledge_units:
+  - id: KU_01
+    title: 知識點名稱
+    type: concept
+    importance: critical
+    core: 一句話核心，需有實質內容。
+    what: 說明這是什麼，以及明確邊界。
+    why: 說明為什麼重要或解決什麼問題。
+    how: 說明機制、流程或操作方式。
+    relationships: 說明與前後概念、因果或決策規則的關係。
+    application: 說明考題、工程、實務或案例怎麼使用。
+    pitfalls: 說明常見誤判、例外或易混淆點。
+    recall: 寫一個不看筆記也能自我測試的問題。
+    source_locators:
+      - file: SOURCE_NOT_FOUND
+        locator_type: unavailable
+        locator: SOURCE_NOT_FOUND
+        evidence: SOURCE_NOT_FOUND；正式 release 前必須換成可追溯來源。
+        confidence: LOW

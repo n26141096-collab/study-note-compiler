@@ -1,0 +1,68 @@
+version: 2.3.0
+material_roles:
+  - instructor_material
+  - textbook_reference
+  - user_note
+  - source_question
+  - report_project
+  - supplement
+source_locator:
+  required: [file, locator_type, locator, evidence, confidence]
+  locator_types: [page, slide, section, line_range, sheet_cell, timestamp, synthetic, unavailable]
+  confidence: [HIGH, MEDIUM, LOW]
+  optional: [visual_check_required, notes]
+knowledge_unit:
+  required:
+    - id
+    - title
+    - type
+    - importance
+    - core
+    - what
+    - why
+    - how
+    - relationships
+    - application
+    - pitfalls
+    - recall
+    - source_locators
+  types:
+    - concept
+    - mechanism
+    - workflow
+    - cause_effect
+    - comparison
+    - formula
+    - decision_rule
+    - failure_mode
+    - pitfall
+    - application
+    - interview
+  importance: [critical, high, normal, low]
+  major_importance: [critical, high]
+  optional: [prerequisites, examples, misconceptions, causal_links, decision_rules, formulas]
+eight_layer_model:
+  layers: [core, what, why, how, relationships, application, pitfalls, recall]
+  required_for_importance: [critical, high]
+  sidecar_complete_but_not_visible_template: true
+assessment:
+  required_fields: [id, difficulty, knowledge_unit, expected_keywords, question, answer, source_locators]
+  levels:
+    L1: recall
+    L2: explain
+    L3: apply
+    L4: diagnose
+  formal_topic_minimum:
+    l1_l2_total: 10
+    l3_l4_total: 10
+    total: 20
+coverage_matrix:
+  input_columns: [knowledge_unit, source, note, l1_l2, l3_l4, pitfall]
+  computed_column: computed_status
+  statuses: [PASS, PARTIAL, GAP]
+  forbid_hand_entered_status: true
+source_markers:
+  missing: SOURCE_NOT_FOUND
+  conflict: SOURCE_CONFLICT
+  external: EXTERNAL_RESEARCH
+  visual_check: VISUAL_CHECK_REQUIRED

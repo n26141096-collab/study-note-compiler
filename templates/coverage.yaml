@@ -1,0 +1,7 @@
+coverage:
+  - knowledge_unit: KU_01
+    source: false
+    note: false
+    l1_l2: false
+    l3_l4: false
+    pitfall: false

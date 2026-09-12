@@ -14,7 +14,8 @@
 | 你的目的 | 前往 |
 |---|---|
 | 下載可安裝版本 | [Latest release](https://github.com/n26141096-collab/study-note-compiler/releases/latest) |
-| 先了解流程與審查標準 | [公開說明 PDF](Study_Note_Compiler_Skill_邏輯說明.pdf) |
+| 先看實際輸出 | [範例 Markdown](examples/sample_topic.md) · [範例 Word](examples/sample_topic.docx) |
+| 了解流程與審查標準 | [公開說明 PDF](Study_Note_Compiler_Skill_邏輯說明.pdf) |
 | 分享使用心得或成果 | [Discussions](https://github.com/n26141096-collab/study-note-compiler/discussions) |
 | 詢問使用方法 | [Q&A](https://github.com/n26141096-collab/study-note-compiler/discussions/categories/q-a) |
 | 回報錯誤 | [Issues](https://github.com/n26141096-collab/study-note-compiler/issues)（登入後選擇 New issue） |
@@ -67,7 +68,7 @@ Repository 專用：
 | `readable-revise` | 不重跑來源、不重建知識單元，只改善既有筆記的學習閱讀層 |
 | `audit` | 唯讀檢查成果，不修改檔案 |
 
-工程／製程／系統整合主題可載入 release 套件內的 `references/engineering_learning_profile.md`，建立「參數 → 機制 → 結果 → 量測 → 失效 → 性能／電性 → 良率／可靠度」與角色分工；其他學科不會被強制套用工程格式。
+工程／製程／系統整合主題可載入 [`engineering_learning_profile.md`](references/engineering_learning_profile.md)，建立「參數 → 機制 → 結果 → 量測 → 失效 → 性能／電性 → 良率／可靠度」與角色分工；其他學科不會被強制套用工程格式。
 
 ## 使用後請留下心得
 

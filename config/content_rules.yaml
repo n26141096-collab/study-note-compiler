@@ -1,0 +1,90 @@
+source_governance:
+  priority:
+    - user_designated_material
+    - instructor_material
+    - user_note
+    - textbook_reference
+    - explicit_external_research
+  forbid_silent_model_fill: true
+  preserve_source_terminology: true
+  preserve_exam_wording_when_relevant: true
+  require_structured_source_locator_for_major_units: true
+  require_source_locator_for_assessment_answers: true
+  minimum_evidence_chars: 12
+  missing_marker: SOURCE_NOT_FOUND
+  conflict_marker: SOURCE_CONFLICT
+  external_marker: EXTERNAL_RESEARCH
+  visual_check_marker: VISUAL_CHECK_REQUIRED
+professional_note_rules:
+  page_order_summary_forbidden: true
+  require_material_role_classification: true
+  extract_existing_questions_before_note_build: true
+  require_knowledge_model_first: true
+  require_core_what_why_how_for_major_units: true
+  require_relationships_or_causal_chain_when_relevant: true
+  require_pitfalls_when_confusable: true
+  prefer_tables_only_when_table_improves_lookup: true
+  forbid_table_everything: true
+  avoid_redundant_restatement: true
+  preserve_source_level_of_detail: true
+  reject_placeholder_only_content: true
+  minimum_substantive_chars_per_major_layer: 12
+  require_explicit_ku_markers_in_markdown: true
+  minimum_markdown_chars_per_major_ku_block: 120
+learner_facing:
+  default_for_build_and_compile: true
+  separate_audit_sidecars_from_reading_prose: true
+  require_chapter_big_picture_when_applicable: true
+  forbid_visible_eight_layer_dump: true
+  forbid_repeated_meta_filler_across_knowledge_units: true
+  forbid_raw_archive_locator_in_reading_prose: true
+  require_human_readable_source_note: true
+  require_varied_question_stems: true
+  l3_l4_answer_flow: [first_check, discriminate, evidence, decision_boundary]
+  manual_readability_sample_per_topic: 3
+  require_read_aloud_review: true
+  readable_revision_preserve_governance_hashes: true
+  readable_revision_audit_dimensions:
+    - template_feel
+    - chapter_big_picture
+    - natural_progression
+    - causal_reasoning
+    - practical_judgment
+    - role_differentiation
+    - scenario_quality
+    - source_traceability
+    - review_efficiency
+    - interview_utility
+    - extensibility
+    - governance_preservation
+  readable_release_pass_min: 85
+  readable_release_minor_min: 80
+profiles:
+  engineering:
+    optional: true
+    reference: references/engineering_learning_profile.md
+    apply_only_when_domain_relevant: true
+learning_science:
+  active_recall: true
+  feynman_prompts: true
+  spaced_review_days: [1, 3, 7, 16, 35]
+  error_log: true
+  flashcards: selective
+assessment:
+  coverage_driven: true
+  levels: [L1, L2, L3, L4]
+  no_random_filler_questions: true
+  source_grounded_answers: true
+  formal_topic_minimum:
+    l1_l2_total: 10
+    l3_l4_total: 10
+coverage:
+  status_must_be_computed: true
+  pass_requires_all_applicable_dimensions: true
+  require_exact_knowledge_unit_set: true
+  gap_if_source_missing: true
+  gap_if_note_missing: true
+quality_rubric:
+  release_ready_score: 90
+  source_fidelity_hard_min: 16
+  knowledge_modeling_hard_min: 16

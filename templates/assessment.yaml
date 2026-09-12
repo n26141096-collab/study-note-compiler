@@ -1,0 +1,13 @@
+questions:
+  - id: Q01
+    difficulty: L1
+    knowledge_unit: KU_01
+    expected_keywords: [keyword]
+    question: 題目內容
+    answer: 來源支持的答案內容
+    source_locators:
+      - file: SOURCE_NOT_FOUND
+        locator_type: unavailable
+        locator: SOURCE_NOT_FOUND
+        evidence: SOURCE_NOT_FOUND；正式 release 前必須換成可追溯來源。
+        confidence: LOW

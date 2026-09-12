@@ -1,0 +1,4 @@
+interface:
+  display_name: "Study Note Compiler"
+  short_description: "來源可追溯、可閱讀且經完整審查的學習筆記編譯器"
+  default_prompt: "使用 $study-note-compiler 將我指定的教材整理成來源可追溯、適合真正學習的 Markdown 與 Word 筆記。"

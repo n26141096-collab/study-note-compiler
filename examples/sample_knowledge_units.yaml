@@ -1,0 +1,73 @@
+knowledge_units:
+  - id: KU_PROBLEM
+    title: Problem Definition and Scope
+    type: workflow
+    importance: critical
+    core: 問題定義先固定產品、批次、時間窗、失效型態與幅度，後續資料分析才有共同邊界。
+    what: 問題定義是把模糊的良率或電性異常轉成可量測、可比較、可追蹤的工程問題。
+    why: 若未先界定範圍，後續共同性分析、DOE 與失效分析容易混入無關條件，產生錯誤因果推論。
+    how: 先確認異常真實性，再界定產品與批次、站點、時間、工具、腔體、材料與失效 bin，最後凍結分析範圍。
+    relationships: Problem Definition 決定 Scope；Scope 決定後續要蒐集哪些 Inline、WAT、CP、FT 與設備歷史資料。
+    application: 良率突降時，先定義受影響 lot、wafer、bin 與時間窗，再比較 good lots 與 bad lots 的製程差異。
+    pitfalls: 常見錯誤是只說 yield drop，卻沒有定義產品、批次、時間窗與失效 signature，導致後續分析無法驗證。
+    recall: 不看筆記時，能說出問題定義至少要固定哪些對象，以及為何它必須先於 DOE。
+    source_locators:
+      - file: SYNTHETIC_LAYOUT_FIXTURE
+        locator_type: synthetic
+        locator: KU_PROBLEM
+        evidence: 示範資料用於測試問題定義、範圍界定與雙欄出版流程。
+        confidence: HIGH
+  - id: KU_COMMONALITY
+    title: Commonality Analysis
+    type: comparison
+    importance: critical
+    core: Commonality 用 good 與 bad 群組的共同條件縮小可疑來源，但不能直接宣告根因。
+    what: 共同性分析比較機台、腔體、材料、recipe、時間窗、量測與產品條件在 good/bad 群組的分布。
+    why: 它可以把大量可能原因縮小成少數可驗證假設，降低盲目加測與 DOE 的成本。
+    how: 建立 good/bad 對照，列出工具、chamber、材料、recipe、時間與量測共同性，再檢查是否也出現在 good lots。
+    relationships: Commonality 產生 Hypothesis；Hypothesis 必須再經機制合理性、時間順序與 Verification 才能升級為 Root Cause。
+    application: 若所有 bad lots 都經過同一 chamber，下一步要看 good lots 是否也經過該 chamber，並檢查 PM 與 recipe 時間線。
+    pitfalls: Bad lots 都共用同一 tool 不代表 tool 已確定是根因；共同性只是縮小範圍的線索。
+    recall: 能用一句話區分 Commonality、Hypothesis 與 Root Cause，並說出 good lots 為何不可省略。
+    source_locators:
+      - file: SYNTHETIC_LAYOUT_FIXTURE
+        locator_type: synthetic
+        locator: KU_COMMONALITY
+        evidence: 示範資料用於測試共同性分析與 good/bad 對照的知識建模。
+        confidence: HIGH
+  - id: KU_CAUSALITY
+    title: Correlation, Causality and Root Cause
+    type: cause_effect
+    importance: critical
+    core: Correlation 是線索，Causality 需要機制與時間順序，Root Cause 還要有可重現的驗證與改善證據。
+    what: 三者分別代表統計共同變動、因果影響路徑，以及能解釋異常並在修正後使問題下降的根本原因。
+    why: 半導體資料高度相關，若把相關性直接當根因，容易做出錯誤停機、recipe 修改或材料判責。
+    how: 先找相關性，再建立可證偽假設，檢查物理機制與時間順序，最後用 split lot、FA、DOE 或受控加測驗證。
+    relationships: Correlation 提供候選；Mechanism 與 temporal order 支撐 Causality；Verification 與 corrective response 支撐 Root Cause。
+    application: 某參數與 leakage 同步上升時，應檢查該參數是否在失效前變化、是否有物理路徑，並用受控實驗確認。
+    pitfalls: 高相關係數、同一機台或一次改善後良率回升，都不足以單獨證明 root cause。
+    recall: 能在沒有筆記時說出從 Correlation 到 Root Cause 至少還缺哪些證據層。
+    source_locators:
+      - file: SYNTHETIC_LAYOUT_FIXTURE
+        locator_type: synthetic
+        locator: KU_CAUSALITY
+        evidence: 示範資料用於測試相關、因果與根因的辨析與診斷題生成。
+        confidence: HIGH
+  - id: KU_CLOSURE
+    title: Verification, CAPA and Closure
+    type: decision_rule
+    importance: high
+    core: 結案不是良率回升，而是根因被驗證、風險解除、改善持續有效且制度文件已更新。
+    what: Verification 驗證假設，Corrective Action 修正原因，Preventive Action 把學到的機制轉成防止再發的控制。
+    why: 只有短期 yield recovery 可能只是暫時性波動；沒有持續性與制度化，問題可能在其他產品或下一次 PM 後重現。
+    how: 執行受控驗證、確認改善後 response 改變、觀察可靠度與其他產品風險，再更新 OCAP、FMEA、Control Plan 或 SOP。
+    relationships: Verification 連接 Hypothesis 與 Root Cause；CAPA 把 root cause 轉成修正與預防；Effectiveness Monitoring 決定是否能正式 closure。
+    application: recipe 修改後良率回升時，仍需追蹤數批產品、確認可靠度與跨產品影響，再完成文件更新與 lesson learned。
+    pitfalls: Hold lot 是 containment，不是 corrective action；yield 回升也不等於已完成 effectiveness monitoring。
+    recall: 能依序說出 Verification、Corrective Action、Preventive Action、Effectiveness Monitoring 與 Closure 的關係。
+    source_locators:
+      - file: SYNTHETIC_LAYOUT_FIXTURE
+        locator_type: synthetic
+        locator: KU_CLOSURE
+        evidence: 示範資料用於測試驗證、CAPA、有效性追蹤與正式結案的流程。
+        confidence: HIGH

@@ -1,0 +1,90 @@
+profile: reference_dense_grayscale_v2_1
+page:
+  size: A4
+  orientation: portrait
+  width_mm: 210
+  height_mm: 297
+  margin_mm:
+    top: 12
+    bottom: 12
+    left: 13
+    right: 13
+fonts:
+  body: Noto Serif CJK TC
+  heading: Noto Sans CJK TC
+  latin: Liberation Serif
+  portability_note: East-Asian and Latin font slots are written separately; system substitution may still reflow on machines lacking these fonts.
+styles:
+  title:
+    size_pt: 15.5
+    bold: true
+    space_after_pt: 2
+  subtitle:
+    size_pt: 8.5
+    space_after_pt: 1
+  heading1:
+    size_pt: 11
+    bold: true
+    space_before_pt: 3
+    space_after_pt: 1
+    keep_with_next: true
+  heading2:
+    size_pt: 10
+    bold: true
+    space_before_pt: 2.5
+    space_after_pt: 0.8
+    keep_with_next: true
+  heading3:
+    size_pt: 9.2
+    bold: true
+    space_before_pt: 2
+    space_after_pt: 0.5
+    keep_with_next: true
+  body:
+    size_pt: 8.9
+    line_spacing: 1.02
+    space_after_pt: 0.8
+  meta:
+    size_pt: 8.2
+  question:
+    size_pt: 8.9
+    bold: true
+  answer:
+    size_pt: 8.7
+    left_indent_mm: 2
+header:
+  template: "{course}｜{topic}｜專業複習灰階版"
+  size_pt: 7.6
+footer:
+  page_number: true
+  size_pt: 7.6
+columns:
+  default_topic_columns: 2
+  spacing_mm: 5.0
+  separator_line: false
+panels:
+  left_ratio: 0.50
+  right_ratio: 0.50
+  gutter_mm: 2.5
+  border: false
+  center_divider: true
+tables:
+  header_fill: D9D9D9
+  key_fill: EDEDED
+  outer_border_eighth_points: 4
+  inner_border_eighth_points: 2
+  cell_margin_twips: 45
+  repeat_header: true
+  keep_small_table_rows_together: 8
+boxes:
+  core_axis_fill: E7E6E6
+  key_sentence_fill: F2F2F2
+  section_fill: D9D9D9
+visual_rules:
+  grayscale_only: true
+  prevent_orphan_headings: true
+  prevent_table_overflow: true
+  dense_layout: true
+  require_real_two_column_section: true
+  require_mixed_layout_support: true
+  require_a4_physical_page_size: true

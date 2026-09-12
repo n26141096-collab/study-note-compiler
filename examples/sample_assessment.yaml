@@ -1,0 +1,294 @@
+questions:
+- id: Q01
+  difficulty: L1
+  knowledge_unit: KU_PROBLEM
+  expected_keywords:
+  - scope
+  - product
+  - lot
+  question: 問題定義至少要固定哪三類邊界？
+  answer: 至少固定產品/批次、時間窗與失效型態；工程上還應補站點、工具、腔體或材料等範圍。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_PROBLEM
+    evidence: 示範資料支持問題定義與範圍界定相關題目的答案。
+    confidence: HIGH
+- id: Q02
+  difficulty: L1
+  knowledge_unit: KU_COMMONALITY
+  expected_keywords:
+  - good lots
+  - bad lots
+  - commonality
+  question: Commonality Analysis 的基本比較對象是什麼？
+  answer: 比較 good lots 與 bad lots 的工具、腔體、材料、recipe、時間與量測共同條件。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_COMMONALITY
+    evidence: 示範資料支持共同性分析與 good/bad 對照相關題目的答案。
+    confidence: HIGH
+- id: Q03
+  difficulty: L1
+  knowledge_unit: KU_CAUSALITY
+  expected_keywords:
+  - correlation
+  - causality
+  question: Correlation 與 Causality 最基本的差異是什麼？
+  answer: Correlation 只表示共同變動；Causality 還需要合理機制與時間順序支持影響路徑。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CAUSALITY
+    evidence: 示範資料支持相關、因果與根因辨析相關題目的答案。
+    confidence: HIGH
+- id: Q04
+  difficulty: L1
+  knowledge_unit: KU_CLOSURE
+  expected_keywords:
+  - containment
+  - corrective action
+  question: Containment 與 Corrective Action 有何差異？
+  answer: Containment 先阻止風險擴大；Corrective Action 則針對已確認原因進行修正。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CLOSURE
+    evidence: 示範資料支持 Verification、CAPA 與 Closure 相關題目的答案。
+    confidence: HIGH
+- id: Q05
+  difficulty: L1
+  knowledge_unit: KU_CLOSURE
+  expected_keywords:
+  - effectiveness monitoring
+  - closure
+  question: 正式 Closure 前還要確認什麼？
+  answer: 要確認改善持續有效、風險解除、可靠度與其他產品沒有新增風險，並完成制度文件更新。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CLOSURE
+    evidence: 示範資料支持 Verification、CAPA 與 Closure 相關題目的答案。
+    confidence: HIGH
+- id: Q06
+  difficulty: L2
+  knowledge_unit: KU_PROBLEM
+  expected_keywords:
+  - DOE
+  - scope
+  question: 為什麼 Problem Definition 應先於 DOE？
+  answer: 因為 scope 與 response 未固定時，DOE 容易混入無關因素，結果即使有差異也難以解釋。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_PROBLEM
+    evidence: 示範資料支持問題定義與範圍界定相關題目的答案。
+    confidence: HIGH
+- id: Q07
+  difficulty: L2
+  knowledge_unit: KU_COMMONALITY
+  expected_keywords:
+  - commonality
+  - root cause
+  question: 為什麼 Commonality 不能直接等同 Root Cause？
+  answer: 共同性只縮小可疑來源，仍需要機制、時間順序與受控驗證才能升級成根因。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_COMMONALITY
+    evidence: 示範資料支持共同性分析與 good/bad 對照相關題目的答案。
+    confidence: HIGH
+- id: Q08
+  difficulty: L2
+  knowledge_unit: KU_CAUSALITY
+  expected_keywords:
+  - mechanism
+  - temporal order
+  - verification
+  question: 從 Correlation 到 Root Cause 還缺哪些證據？
+  answer: 至少要補物理或工程機制、時間順序、可證偽假設與受控驗證，並觀察修正後問題是否下降。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CAUSALITY
+    evidence: 示範資料支持相關、因果與根因辨析相關題目的答案。
+    confidence: HIGH
+- id: Q09
+  difficulty: L2
+  knowledge_unit: KU_CLOSURE
+  expected_keywords:
+  - CAPA
+  - prevention
+  question: Preventive Action 為什麼不是單純重做 Corrective Action？
+  answer: Preventive Action 是把已知機制制度化，降低同類問題在其他批次、產品或未來條件再次發生的機率。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CLOSURE
+    evidence: 示範資料支持 Verification、CAPA 與 Closure 相關題目的答案。
+    confidence: HIGH
+- id: Q10
+  difficulty: L2
+  knowledge_unit: KU_CLOSURE
+  expected_keywords:
+  - yield recovery
+  - closure
+  question: 為什麼 yield recovery 不等於可以立即結案？
+  answer: 短期回升可能只是波動；仍需 effectiveness monitoring、可靠度檢查與制度更新才能證明改善可持續。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CLOSURE
+    evidence: 示範資料支持 Verification、CAPA 與 Closure 相關題目的答案。
+    confidence: HIGH
+- id: Q11
+  difficulty: L3
+  knowledge_unit: KU_PROBLEM
+  expected_keywords:
+  - wafer map
+  - fail bin
+  - scope
+  question: 只有 CP fail bin 與 wafer map 時，下一步最值得補哪三類資料？
+  answer: 優先補製程/設備歷史、WAT/Inline 對應資料與時間/工具/腔體共同性，讓失效 signature 能回接製程流程。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_PROBLEM
+    evidence: 示範資料支持問題定義與範圍界定相關題目的答案。
+    confidence: HIGH
+- id: Q12
+  difficulty: L3
+  knowledge_unit: KU_COMMONALITY
+  expected_keywords:
+  - good lots
+  - chamber
+  - PM
+  question: 所有 bad lots 都經過同一 chamber，下一步怎麼做？
+  answer: 先查 good lots 是否也經過該 chamber，再比 PM、recipe、時間窗與其他腔體，最後設計驗證而非直接判根因。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_COMMONALITY
+    evidence: 示範資料支持共同性分析與 good/bad 對照相關題目的答案。
+    confidence: HIGH
+- id: Q13
+  difficulty: L3
+  knowledge_unit: KU_CAUSALITY
+  expected_keywords:
+  - leakage
+  - mechanism
+  - split lot
+  question: 某製程參數與 leakage 高度相關，如何設計下一步？
+  answer: 先確認參數變化早於失效且存在合理機制，再用 split lot、DOE 或受控加測改變該參數並觀察 leakage response。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CAUSALITY
+    evidence: 示範資料支持相關、因果與根因辨析相關題目的答案。
+    confidence: HIGH
+- id: Q14
+  difficulty: L3
+  knowledge_unit: KU_CLOSURE
+  expected_keywords:
+  - recipe
+  - effectiveness monitoring
+  question: recipe 修改後 yield 回升，還要做什麼？
+  answer: 追蹤多批、檢查可靠度與其他產品，確認改善持續性，再更新 OCAP/FMEA/Control Plan/SOP。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CLOSURE
+    evidence: 示範資料支持 Verification、CAPA 與 Closure 相關題目的答案。
+    confidence: HIGH
+- id: Q15
+  difficulty: L3
+  knowledge_unit: KU_PROBLEM
+  expected_keywords:
+  - margin
+  - trend
+  - reliability
+  question: 產品仍 pass 規格但分布向邊界偏移，應怎麼處理？
+  answer: 不能只看 pass rate；應比歷史分布與 margin，串接製程資料與可靠度風險，再判斷是否加測或圍堵。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_PROBLEM
+    evidence: 示範資料支持問題定義與範圍界定相關題目的答案。
+    confidence: HIGH
+- id: Q16
+  difficulty: L4
+  knowledge_unit: KU_COMMONALITY
+  expected_keywords:
+  - commonality
+  - confounder
+  - good lots
+  question: Bad lots 與某材料批次完全重疊，為何仍可能不是材料根因？
+  answer: 材料批次可能同時綁定特定機台或時間窗；必須用 good lots、其他材料批次與受控驗證排除共變因子。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_COMMONALITY
+    evidence: 示範資料支持共同性分析與 good/bad 對照相關題目的答案。
+    confidence: HIGH
+- id: Q17
+  difficulty: L4
+  knowledge_unit: KU_CAUSALITY
+  expected_keywords:
+  - root cause
+  - reproducibility
+  - counterfactual
+  question: 一次把參數調回正常後良率恢復，足以證明根因嗎？
+  answer: 不足。還要確認機制、時間順序與可重現性，最好用對照或再次受控改變建立反事實證據。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CAUSALITY
+    evidence: 示範資料支持相關、因果與根因辨析相關題目的答案。
+    confidence: HIGH
+- id: Q18
+  difficulty: L4
+  knowledge_unit: KU_CLOSURE
+  expected_keywords:
+  - containment
+  - closure
+  - risk
+  question: Hold lot 後未再出現不良，可以結案嗎？
+  answer: 不可以。Hold lot 只阻斷暴露，沒有證明原因消失；仍需根因驗證、改善、有效性追蹤與風險解除。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CLOSURE
+    evidence: 示範資料支持 Verification、CAPA 與 Closure 相關題目的答案。
+    confidence: HIGH
+- id: Q19
+  difficulty: L4
+  knowledge_unit: KU_PROBLEM
+  expected_keywords:
+  - measurement system
+  - false abnormality
+  question: 良率突然下降但所有製程參數正常，最危險的第一個假設是什麼？
+  answer: 要先排除 tester、probe card、program、資料 mapping 或量測系統假異常，避免把量測問題誤導成製程根因。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_PROBLEM
+    evidence: 示範資料支持問題定義與範圍界定相關題目的答案。
+    confidence: HIGH
+- id: Q20
+  difficulty: L4
+  knowledge_unit: KU_CAUSALITY
+  expected_keywords:
+  - cross-layer evidence
+  - Inline
+  - WAT
+  - CP
+  - FT
+  question: 若 Inline 異常、WAT 輕微偏移、CP fail 明顯但 FT 樣本不足，如何判斷證據強度？
+  answer: 可視為跨層一致的因果線索，但 FT 與可靠度證據仍不足；應明確標示限制並補終端或可靠度驗證。
+  source_locators:
+  - file: SYNTHETIC_LAYOUT_FIXTURE
+    locator_type: synthetic
+    locator: KU_CAUSALITY
+    evidence: 示範資料支持相關、因果與根因辨析相關題目的答案。
+    confidence: HIGH
